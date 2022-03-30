@@ -1,0 +1,36 @@
+@import '../../scss/variables/colors';
+.button {
+    font-family: 'Source Sans Pro', sans-serif, Arial, Helvetica, sans-serif;
+    background-color: $shade-white;
+    font-weight: 500;
+    box-shadow: 0px, 1px rgba(45, 55, 72, 0.08);
+    border-width: 1px;
+    border-style: solid;
+    border-color: $default-gray-30;
+    text-transform: none;
+    cursor: pointer;
+    font-size: 14px;
+    border-radius: 4px;
+    background-repeat: no-repeat;
+    padding: 6px 12px 6px 32px;
+
+    &:hover {
+        border-color: $default-gray-30; 
+    }
+
+    &-edit {
+        background-image: url('../../assets/edit.svg');
+        background-position: 9px center;
+    }
+
+    &-delete {
+        background-image: url('../../assets/trash.svg');
+        background-position: 9px center;
+    }
+
+    &-delete-icon-only {
+        background-image: url('../../assets/trash.svg');
+        background-position: center;
+        padding: 15px;
+    }
+}

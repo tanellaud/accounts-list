@@ -2,7 +2,6 @@
 @import '../../scss/variables/spacing';
 
 .account {
-   
     &-container {
         padding: $spacer-2_5;
         width: 850px;
@@ -19,12 +18,21 @@
             align-items: center;
             flex-direction: row;
             margin-bottom: $spacer-2;
+            padding-left: $spacer-1_5;
 
             .selected-users__nr {
                 font-weight: 600;
                 font-size: 16px;
                 color: $default-gray-80;
                 margin-right: $spacer-2_5;
+            }
+
+            .buttons-container {
+                display: flex;
+
+                .button {
+                    margin-left: $spacer-1;
+                }
             }
         }
     }
@@ -34,7 +42,7 @@
     &__item {
         display: flex;
         grid-template-rows: repeat(5, 1fr);
-        padding: $spacer-1_5 $spacer-2_5 $spacer-1_5 0;
+        padding: $spacer-1_5 $spacer-2_5 $spacer-1_5 $spacer-1_5;
         align-items: center;
         margin-bottom: 4px;
         border-radius: 4px;
@@ -44,7 +52,8 @@
             background-color: $default-gray;
 
             .users-list__buttons-container {
-                display: block;
+                display: flex;
+                flex-direction: row;
             }
         }
 
@@ -118,5 +127,9 @@
     &__buttons-container {
         margin-left: auto;
         display: none;
+
+        .button {
+            margin-left: $spacer-1;
+        }
     }
 } 

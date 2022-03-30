@@ -1,16 +1,11 @@
 import './account.styles.scss';
 import Header from '../../components/header/header.component';
-import Button from '@mui/material/Button';
-import DeleteIcon from '@mui/icons-material/Delete';
-import EditIcon from '@mui/icons-material/Edit';
-import FormGroup from '@mui/material/FormGroup';
-import IconButton from '@mui/material/IconButton';
 import Checkbox from '@mui/material/Checkbox';
+import CustomButton from '../../components/custom-button/custom-button.component';
 
 interface AccountPageProps {
     users: any;
 }
-
 
 export const AccountPage = ({ users }: AccountPageProps) => {
     return(
@@ -22,12 +17,8 @@ export const AccountPage = ({ users }: AccountPageProps) => {
                         0 users selected
                     </div>
                     <div className='buttons-container'>
-                        <Button variant="outlined" startIcon={<EditIcon />}>
-                            Edit
-                        </Button>
-                        <Button variant="outlined" startIcon={<DeleteIcon />}>
-                            Delete
-                        </Button>
+                        <CustomButton variant="edit" buttonLabel="Edit" />
+                        <CustomButton variant='delete' buttonLabel="Delete" />
                     </div>
                 </div>
                 <div className='account__users-list'>
@@ -37,9 +28,7 @@ export const AccountPage = ({ users }: AccountPageProps) => {
                         
                     <div className='users-list__item' key={user.id}>
                         <div className='users-list__checkbox-container'>
-                            <FormGroup>
-                                <Checkbox />
-                            </FormGroup>
+                            <Checkbox id={user.id} />
                         </div>
                         <div className='users-list__avatar-container'>
                             <img className="users-list__avatar-image" src={user.avatar} alt={user.name} />
@@ -52,12 +41,8 @@ export const AccountPage = ({ users }: AccountPageProps) => {
                             <span className={`users-list__role users-list__role--${user.role.toLowerCase()}`}>{user.role}</span>
                         </div>
                         <div className='users-list__buttons-container'>
-                            <Button variant="outlined" startIcon={<EditIcon />}>
-                                Edit
-                            </Button>
-                            <IconButton aria-label="delete">
-                                <DeleteIcon />
-                            </IconButton>
+                            <CustomButton variant="edit" buttonLabel="Edit" />
+                            <CustomButton variant='delete-icon-only' />
                         </div>
                     </div>    
                 

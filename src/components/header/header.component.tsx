@@ -1,12 +1,8 @@
-import React, { FC } from 'react';
+import React from 'react';
 import Button from '@mui/material/Button';
 import './header.styles.scss';
 
-interface Props {
-
-}
-
-const Header: FC<Props> = () => (
+const Header = () => (
     <div className='header__container'>
         <div className='header__title-container'>
             <h1 className='header__title'>Account users</h1>
