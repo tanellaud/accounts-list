@@ -1,0 +1,45 @@
+{"users":[
+    {
+       "id":10001,
+       "name":"Geraldine Daniel",
+       "email":"Estelle_Crona@example.org",
+       "avatar":"https://randomuser.me/api/portraits/men/32.jpg",
+       "role":"ADMIN"
+    },
+    {
+       "id":10002,
+       "name":"Hugh Graham",
+       "email":"Roxanne30@example.com",
+       "avatar":"https://randomuser.me/api/portraits/women/44.jpg",
+       "role":"AGENT"
+    },
+    {
+       "id":10003,
+       "name":"Johnathan Feeney",
+       "email":"Junius35@example.org",
+       "avatar":"https://randomuser.me/api/portraits/men/46.jpg",
+       "role":"ACCOUNT_MANAGER"
+    },
+    {
+       "id":10004,
+       "name":"Johanna Stamm",
+       "email":"Murl_Lemke1@example.org",
+       "avatar":"https://randomuser.me/api/portraits/men/97.jpg",
+       "role":"ACCOUNT_MANAGER"
+    },
+    {
+       "id":10005,
+       "name":"Paul Christiansen",
+       "email":"Rowena.Greenholt@example.net",
+       "avatar":"https://uifaces.co/our-content/donated/gPZwCbdS.jpg",
+       "role":"EXTERNAL_REVIEWER"
+    },
+    {
+       "id":10006,
+       "name":"Erik Lindgren",
+       "email":"Genesis.MacGyver@example.net",
+       "avatar":"https://images.unsplash.com/photo-1493666438817-866a91353ca9?ixlib=rb-0.3.5&q=80&fm=jpg&crop=faces&fit=crop&h=200&w=200&s=b616b2c5b373a80ffc9636ba24f7a4a9",
+       "role":"AGENT"
+    }
+]
+}

@@ -1,0 +1,31 @@
+@import '../../scss/variables/colors';
+@import '../../scss/variables/spacing';
+
+.header {
+    &__container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: $spacer-2;
+    }
+
+    &__title {
+        font-size: 18px;
+    }
+    &__search-box {
+        .search-input {
+            background-color: $shade-white;
+            border: 1px solid #E2E8F0;
+            padding: 8px;
+            height: 38px;
+            border-radius: 4px;
+        }
+
+        .button {
+            margin-left: $spacer-1_5;
+            background-color: $default-brand-50;
+            text-transform: none;
+        }
+    }
+    
+}
