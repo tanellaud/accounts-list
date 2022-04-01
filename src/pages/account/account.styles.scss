@@ -36,9 +36,16 @@
             }
         }
     }
+    &__users-list {
+        max-height: 700px;
+        overflow-y: auto;
+    }
 }
 
 .users-list {
+    height: 300px;
+    overflow-y: auto;
+
     &__item {
         display: flex;
         grid-template-rows: repeat(5, 1fr);
