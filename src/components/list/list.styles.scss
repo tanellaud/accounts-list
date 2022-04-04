@@ -1,0 +1,19 @@
+@import '../../scss/variables/spacing';
+
+.account__users {
+    &-list-tools {
+        display: flex;
+        padding: 0 0 $spacer-2 $spacer-2;
+
+        .users-list__name-container {
+            margin-right: $spacer-5;
+        }
+    }
+}
+.users-list__sort {
+    background-image: url(../../assets/arrow-down.svg);
+    background-repeat: no-repeat;
+    background-position: 100% center;
+    padding: 0 16px 0 0;
+    cursor: pointer;
+}

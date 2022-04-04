@@ -1,0 +1,105 @@
+@import '../../scss/variables/colors';
+@import '../../scss/variables/spacing';
+
+.users-list {
+    height: 300px;
+    overflow-y: auto;
+
+    &__item {
+        display: flex;
+        grid-template-rows: repeat(5, 1fr);
+        padding: $spacer-1_5 $spacer-2_5 $spacer-1_5 $spacer-1_5;
+        align-items: center;
+        margin-bottom: 4px;
+        border-radius: 4px;
+        box-sizing: border-box;
+        border-left: 4px solid $shade-white;
+        
+        &:hover {
+            
+
+            .users-list__buttons-container {
+                display: flex;
+                flex-direction: row;
+            }
+        }
+
+        &--selected {
+            border-left: 4px solid $default-brand-50;
+            background-color: $default-gray;
+        }
+    } 
+    
+    &__checkbox-container {
+        width: 42px;
+        margin-right: $spacer-1_5;
+        position: relative;
+
+        span {
+            padding: 0;
+            z-index: 1;
+        }
+    }
+
+    &__avatar-container {
+        width: 32px;
+        margin-right: $spacer-1_5;
+    }
+
+    &__avatar-image {
+        width: 32px;
+        height: 32px;
+        border-radius: 16px;
+    }
+
+    &__name-container {
+        width: 300px;
+    }
+
+    &__name {
+        font-weight: 600;
+        color: $default-fray-80;
+        margin-right: $spacer-1_5;
+    }
+
+    &__role-container {
+        width: 140px;
+        margin-right: $spacer-1_5;
+    }
+
+    &__role {
+        padding: 3px 8px;
+        display: inline-block;
+        border-radius: 4px;
+        font-weight: 600;
+
+        &--account_manager {
+            background-color: $default-pink-20;
+            color: $default-pink-80;
+        }
+
+        &--agent {
+            background-color: $default-blue-20;
+            color: $default-blue-80;
+        }
+
+        &--external_reviewer {
+            background-color: $default-orange-20;
+            color: $default-orange-80
+        }
+
+        &--admin {
+            background-color: $default-purple-20;
+            color: $default-purple-80;
+        }
+    }
+
+    &__buttons-container {
+        margin-left: auto;
+        display: none;
+
+        .button {
+            margin-left: $spacer-1;
+        }
+    }
+} 
