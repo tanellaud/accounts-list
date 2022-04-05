@@ -12,7 +12,6 @@ type ListCompProps = {
 };
 
 const ListComp = ({ users, style, handleChange, handleSelectAll, sortByPermission }: ListCompProps) => {
-
    return (
     <div className='account__users-list'>
             <div className='account__users-list-tools'>

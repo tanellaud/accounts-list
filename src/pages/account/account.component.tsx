@@ -9,6 +9,7 @@ export const AccountPage = () => {
     const [searchField, setSearchField] = useState('');
     const [filteredUsers, setFilterUsers] = useState(users);
     const [selectedUsers, setSelectedUsers] = useState([]);
+    const [selectedUserCount, setselectedUserCount] = useState(0);
 
     const getData = async () => {
         await fetch('./users.json'
@@ -51,7 +52,7 @@ export const AccountPage = () => {
         
         user.selected = !user.selected ? true : false;
 
-        countSelectedUsers(users)
+        countSelectedUsers()
         setSelectedUsers(user)
     };
     
@@ -59,8 +60,8 @@ export const AccountPage = () => {
         const allSelectedUsers = users.map((user) => {
             user.selected = !e.target.checked ? false : true;
         });
-        
-        countSelectedUsers(users)
+
+        countSelectedUsers()
         setSelectedUsers(allSelectedUsers)
     };
 
@@ -70,15 +71,12 @@ export const AccountPage = () => {
         setFilterUsers(sortedUsers);
     }
     
-    const countSelectedUsers = (users: any) => {
-
+    const countSelectedUsers = () => {
         const itemCount = users.filter((user:any) => {
             return user.selected
         })
 
-        console.log(itemCount)
-
-        return itemCount.length;
+        setselectedUserCount(itemCount.length)
     };
     return(
         <div className='account-container'>
@@ -87,7 +85,7 @@ export const AccountPage = () => {
             <div className='account-box'>
                 <div className='account-box__tools'>
                     <div className='selected-users__nr'>
-                        {countSelectedUsers} users selected
+                        {selectedUserCount} users selected
                     </div>
                     <div className='buttons-container'>
                         <CustomButton variant="edit" buttonLabel="Edit" />
